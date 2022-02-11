@@ -1,8 +1,9 @@
 package rensyu_mondai;
 
 public class Main {
-
+//こっちがトピック
 	public static void main(String[] args) {
+		
 		
 		Hero h1 = new Hero("minato");
 		Sword s = new Sword("鋼の剣");
