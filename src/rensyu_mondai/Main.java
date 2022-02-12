@@ -2,8 +2,8 @@ package rensyu_mondai;
 
 import java.util.*;
 import java.text.SimpleDateFormat;
-public class Main {
-//こっちがトピック
+public class Main {	
+
 	public static void main(String[] args) throws Exception{
 		
 		SimpleDateFormat f = new SimpleDateFormat("yyyy/mm/dd");
