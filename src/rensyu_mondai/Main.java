@@ -1,52 +1,63 @@
 package rensyu_mondai;
-
+import static rensyu_mondai.AccountType.*;
 import java.util.*;
 import java.text.SimpleDateFormat;
 public class Main {	
 
 	public static void main(String[] args) throws Exception{
 		
-		SimpleDateFormat f = new SimpleDateFormat("yyyy/mm/dd");
-		List<Book> books = new ArrayList<>();
+		Outer.Inner ic = new Outer.Inner();
 		
-		Book b1 = new Book();
-		b1.setTitle("Java入門");
-		b1.setPublisherDate(f.parse("2011/10/17"));
-		b1.setComment("スッキリ分かる");
+		//Account a = new Account("123456789", 99999999, FUTSU);
+		
+//		Pocket<String> p = new Pocket();
+//		p.put("1192");
+//		String s = p.get();
+//		System.out.println(s);
+//		
 		
 		
-		
-		Book b2 = new Book();
-		b2.setTitle("Python入門");
-		b2.setPublisherDate(f.parse("2019/6/11"));
-		b2.setComment("カレー食べたよ");
-		
-		Book b3 = new Book();
-		b3.setTitle("C言語入門");
-		b3.setPublisherDate(f.parse("2018/6/21"));
-		b3.setComment("ポインタも自由自在");
-		
-		books.add(b1);
-		books.add(b2);
-		books.add(b3);
-		
-		Collections.sort(books, new TitleComparator());
-		
+//		SimpleDateFormat f = new SimpleDateFormat("yyyy/mm/dd");
+//		List<Book> books = new ArrayList<>();
+//		
+//		Book b1 = new Book();
+//		b1.setTitle("Java入門");
+//		b1.setPublisherDate(f.parse("2011/10/17"));
+//		b1.setComment("スッキリ分かる");
+//		
+//		
+//		
+//		Book b2 = new Book();
+//		b2.setTitle("Python入門");
+//		b2.setPublisherDate(f.parse("2019/6/11"));
+//		b2.setComment("カレー食べたよ");
+//		
+//		Book b3 = new Book();
+//		b3.setTitle("C言語入門");
+//		b3.setPublisherDate(f.parse("2018/6/21"));
+//		b3.setComment("ポインタも自由自在");
+//		
+//		books.add(b1);
+//		books.add(b2);
+//		books.add(b3);
+//		
+//		Collections.sort(books, new TitleComparator());
+//		
 		
 //		System.out.println(books);
 		
-		for(Book b : books) {
-			System.out.println(b);
-		}
-		
-		
-		Collections.sort(books);
+//		for(Book b : books) {
+//			System.out.println(b);
+//		}
+//		
+//		
+//		Collections.sort(books);
 		
 //		System.out.println(books);
 		
-		for(Book b : books) {
-			System.out.println(b);
-		}
+//		for(Book b : books) {
+//			System.out.println(b);
+//		}
 		
 //		System.out.println(b1.getTitle());
 //		System.out.println(b2.getTitle());
