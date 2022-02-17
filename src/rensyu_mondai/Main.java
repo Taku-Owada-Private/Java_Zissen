@@ -7,6 +7,7 @@ public class Main {
 	public static void main(String[] args) throws Exception{
 		
 		Outer.Inner ic = new Outer.Inner();
+		System.out.println("test");
 		
 		//Account a = new Account("123456789", 99999999, FUTSU);
 		
