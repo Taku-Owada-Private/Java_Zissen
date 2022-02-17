@@ -1,13 +1,60 @@
 package rensyu_mondai;
 import static rensyu_mondai.AccountType.*;
+import static rensyu_mondai.KeyType.*;
+
 import java.util.*;
 import java.text.SimpleDateFormat;
 public class Main {	
 
-	public static void main(String[] args) throws Exception{
+	
+	public static void main(String[] args) {
 		
-		Outer.Inner ic = new Outer.Inner();
-		System.out.println("test");
+		StrongBox<String> sb = new StrongBox<>();
+		sb.put("123");
+		System.out.println(sb.get());
+		
+		StrongBox<Integer> sb2 = new StrongBox<Integer>();
+		sb2.put(123);
+		System.out.println(sb2.get());
+		
+		
+		
+		
+		
+//		Optional <String> s = decorate("",'*');
+//		System.out.println(s.orElse("nullのため処理できません"));
+//		
+		
+		
+		
+		
+		
+		
+//		Optional<String> op1 = Optional.ofNullable("ミナト");
+//		System.out.println(op1);
+//		
+//		Optional<String> op2 = Optional.ofNullable(null);
+//		System.out.println(op2);
+//		
+//		
+//		System.out.println(op1.isPresent());
+//		System.out.println(op2.isPresent());
+//		
+//		System.out.println("勇者"+op1.get());
+//		//System.out.println("勇者"+op2.get());
+//		
+//		System.out.println("勇者"+op1.orElse("名無し"));
+//		System.out.println("勇者"+op2.orElse("名無し"));
+		
+//		Pocket <Object> pocket = new Pocket<>();
+//		System.out.println("使い捨てのインスタンスを作り、pocketに入れます");
+//		
+//		pocket.put(new Object(){
+//			String innerField;
+//			void innerMethod() {}
+//		});
+//		Outer.Inner ic = new Outer.Inner();
+//		System.out.println("test");
 		
 		//Account a = new Account("123456789", 99999999, FUTSU);
 		
@@ -94,5 +141,7 @@ public class Main {
 //		System.out.println("コピー元とコピー先の勇者の装備の名前を表示します");
 //		System.out.println("コピー元："+h1.getSword().getName()+"/コピー先："+h2.getSword().getName());
 	}
+	
+	
 
 }
