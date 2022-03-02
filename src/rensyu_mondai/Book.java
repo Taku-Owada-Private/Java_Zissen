@@ -3,6 +3,10 @@ package rensyu_mondai;
 
 import java.util.*;
 
+import org.apache.commons.lang3.builder.CompareToBuilder;
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
+
 public class Book  implements Comparable<Book>, Cloneable{
 
 	private String title;
@@ -40,6 +44,12 @@ public class Book  implements Comparable<Book>, Cloneable{
 		this.comment = "初期設定値";
 	}
 	
+	
+	public boolean equals(Object o) {
+		return EqualsBuilder.reflectionEquals(this, o);
+	}
+	
+/*
 	public boolean equals(Object o) {
 		if(o == this) {return true ;}
 		if(o == null) {return false ;}
@@ -49,15 +59,28 @@ public class Book  implements Comparable<Book>, Cloneable{
 		if(!(this.publisherDate == b.publisherDate)) {return false;}
 		return true;
 	}
+*/
 	
+	public int hashCode() {
+		return HashCodeBuilder.reflectionHashCode(this);
+	}
+	
+/*
 	public int hashCode() {
 		return Objects.hash(this.title , this.publisherDate , this.comment);
 	}
+*/	
 	
+	
+	
+	public int compareTo(Book b) {
+		return CompareToBuilder.reflectionCompare(this, b , "comment" , "title");
+	}
+/*
 	public int compareTo (Book b) {
 		return this.publisherDate.compareTo(b.publisherDate) ;
 	}
-	
+*/	
 	public Book clone() {
 		Book result = new Book();
 		result.title = this.title;

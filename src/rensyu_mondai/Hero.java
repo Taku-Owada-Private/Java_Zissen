@@ -1,9 +1,15 @@
 package rensyu_mondai;
 
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+import java.io.Serializable;
 import java.util.Objects;
 
-public class Hero implements Cloneable {
+public class Hero implements Cloneable , Serializable {
 
+	private static final long serialVersionUID = 888888888888L;
+	
 	private String name;
 	private int hp,mp;
 	private Sword sword;
@@ -60,6 +66,20 @@ public class Hero implements Cloneable {
 		result.hp= this.hp;
 		result.sword= this.sword.clone();
 		return result;
+	}
+	
+	public Hero loadHeroFromFile() throws IOException{
+		BufferedReader br = new BufferedReader(new FileReader("/Users/owadataku/eclipse-workspace/Java_Zissen/java_rensyu.json"));
+		
+		String name = br.readLine();
+		String hp = br.readLine();
+		String mp = br.readLine();
+		br.close();
+		return new Hero(name, Integer.parseInt(hp), Integer.parseInt(mp));
+		
+		
+		
+		
 	}
 }
 
