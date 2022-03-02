@@ -1,10 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
+	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-16">
 		<attributes>
 			<attribute name="module" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="lib" path="/Users/owadataku/eclipse-workspace/Java_Zissen/commons-lang3-3.12.0 2/commons-lang3-3.12.0.jar"/>
+	<classpathentry kind="lib" path="/Users/owadataku/eclipse-workspace/Java_Zissen/apache-log4j-2.17.1-bin/log4j-1.2-api-2.17.1.jar"/>
+	<classpathentry kind="lib" path="/Users/owadataku/eclipse-workspace/Java_Zissen/apache-log4j-2.17.1-bin/log4j-core-2.17.1.jar"/>
+	<classpathentry kind="lib" path="/Users/owadataku/eclipse-workspace/Java_Zissen/commons-csv-1.9.0/commons-csv-1.9.0.jar"/>
+	<classpathentry kind="lib" path="/Users/owadataku/eclipse-workspace/Java_Zissen/jackson-annotations-2.13.1.jar"/>
+	<classpathentry kind="lib" path="/Users/owadataku/eclipse-workspace/Java_Zissen/jackson-core-2.13.1.jar"/>
+	<classpathentry kind="lib" path="/Users/owadataku/eclipse-workspace/Java_Zissen/jackson-databind-2.13.1.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
