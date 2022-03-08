@@ -31,15 +31,167 @@ import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.sql.*;
+
 
 public class Main {	
 	
-	public static void main(String[] args)throws Exception {
+	public static void main(String[] args) {
+		
+		
+		
+		System.out.println("アサートにわざと失敗します");
+		assert 1 == 0;
+		System.out.println("正常終了します");
+		
+//		
+//		System.out.println("1円以上のアイテム一覧を表示します");
+//		ArrayList<Item> items = ItemsDAO.findByMinimumPrice(1);
+//		for(Item item : items) {
+//			System.out.printf('%10s%4d%4d' , item.getName(), item.getPrice(), item.getWeight());
+//		}
+		
+/*		
+		try {
+			Class.forName("org.h2.Driver");
+		}catch(ClassNotFoundException e) {
+			throw new IllegalStateException("ドライバーのロードに失敗しました");
+		}
+		
+		Connection con = null;
+		
+		try {
+			//STEP1
+			con = DriverManager.getConnection("jdbc:h2:~/mydb");
+			con.setAutoCommit(false);
+			//STEP2 
+			//メインの送信処理
+			con.commit();
+		}catch(SQLException e2) {
+			e2.printStackTrace();
+		}finally {
+			//STEP3
+			if(con != null) {
+				try {
+					con.close();
+				}catch(SQLException e3) {
+					e3.printStackTrace();
+				}
+			}
+		}
+		
+*/		
 		
 		
 		
 		
 		
+		
+		
+		
+		
+		
+/*		
+		try {
+			Class.forName("org.h2.Driver");
+		}catch(ClassNotFoundException e) {
+			throw new IllegalStateException("ドライバのダウンロードに失敗しました");
+		
+		}
+		
+		Connection con = null;
+		
+		try {
+			//STEP1　データベースの接続
+			con = DriverManager.getConnection("jdbc:h2:~/mydb");
+			//STEP2 SQL送信処理
+			
+
+			//STEP①
+			PreparedStatement pstmt = con.prepareStatement("SELECT * FROM MONSTETRS WHERE BIRTHDAY = ?");
+			//STEP②
+			java.util.Date d = new java.util.Date();
+			long l = d.getTime();
+			Timestamp ts = new Timestamp(l);
+			pstmt.setTimestamp(1, ts);
+			//STEP③
+			ResultSet rs = pstmt.executeQuery();
+			//STEP④
+			rs.close();
+			pstmt.close();
+			}catch (SQLException e) {
+				e.printStackTrace();
+			}finally {
+			//STEP3　データベース接続の切断	
+				if(con != null ) {
+					try {
+						con.close();
+					}catch(SQLException e) {
+						e.printStackTrace();
+					}
+				}
+			}
+			
+		
+*/		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+/*		
+		//事前準備
+		try {
+			Class.forName("org.h2.Driver");
+		}catch(ClassNotFoundException e) {
+			throw new IllegalStateException("ドライバのダウンロードに失敗しました");
+		
+		}
+		
+		Connection con = null;
+		
+		try {
+		//STEP1　データベースの接続
+		con = DriverManager.getConnection("jdbc:h2:~/mydb");
+		//STEP2 SQL送信処理
+		
+		//①送信すべきSQLの雛形準備
+		PreparedStatement pstmt = con.prepareStatement("DELETE FROM MONSTERS WHERE HP <= ? OR NAME = ?");
+		//②雛形に値を流し込みSQL文作成
+		pstmt.setInt(1, 10); 
+		pstmt.setString(2, "ゾンビ"); 
+		
+		//組み立て終えたSQL文をDBMSに送信する
+		int r = pstmt.executeUpdate();
+		
+		//処理結果を判定する
+		if(r != 0) {
+			System.out.println(r+"件のモンスターを削除しました");
+		}else {
+			System.out.println("該当するモンスターはありませんでした");
+		}
+		pstmt.close();
+		//メインの処理は後述
+		}catch (SQLException e) {
+			e.printStackTrace();
+		}finally {
+		//STEP3　データベース接続の切断	
+			if(con != null ) {
+				try {
+					con.close();
+				}catch(SQLException e) {
+					e.printStackTrace();
+				}
+			}
+		}
+		
+*/		
 		
 		
 		
